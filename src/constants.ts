@@ -374,13 +374,13 @@ export const PROVINCE_ADJACENCY: { [key: string]: string[] } = {
 };
 
 export const INITIAL_ARMIES = [
-  { id: 'rep_1', faction: Faction.REPUBLICAN, provinceId: 'madrid', movesLeft: 2, manpower: 5000, morale: 80, militarization: 40 },
-  { id: 'rep_2', faction: Faction.REPUBLICAN, provinceId: 'barcelona', movesLeft: 2, manpower: 4500, morale: 85, militarization: 35 },
-  { id: 'rep_3', faction: Faction.REPUBLICAN, provinceId: 'valencia', movesLeft: 2, manpower: 3000, morale: 75, militarization: 30 },
-  { id: 'nat_1', faction: Faction.NATIONALIST, provinceId: 'burgos', movesLeft: 2, manpower: 6000, morale: 70, militarization: 50 },
-  { id: 'nat_2', faction: Faction.NATIONALIST, provinceId: 'sevilla', movesLeft: 2, manpower: 5500, morale: 75, militarization: 55 },
-  { id: 'nat_3', faction: Faction.NATIONALIST, provinceId: 'zaragoza', movesLeft: 2, manpower: 4000, morale: 65, militarization: 45 },
-  { id: 'nat_morocco', faction: Faction.NATIONALIST, provinceId: 'tetouan', movesLeft: 2, manpower: 8000, morale: 90, militarization: 70 },
+  { id: 'rep_1', faction: Faction.REPUBLICAN, provinceId: 'madrid', movesLeft: 2, manpower: 5000, maxManpower: 5000, composition: { infantry: 3000, artillery: 1500, tanks: 500 }, designedComposition: { infantry: 3000, artillery: 1500, tanks: 500 }, morale: 80, militarization: 40 },
+  { id: 'rep_2', faction: Faction.REPUBLICAN, provinceId: 'barcelona', movesLeft: 2, manpower: 4500, maxManpower: 4500, composition: { infantry: 3000, artillery: 1000, tanks: 500 }, designedComposition: { infantry: 3000, artillery: 1000, tanks: 500 }, morale: 85, militarization: 35 },
+  { id: 'rep_3', faction: Faction.REPUBLICAN, provinceId: 'valencia', movesLeft: 2, manpower: 3000, maxManpower: 3000, composition: { infantry: 2000, artillery: 1000, tanks: 0 }, designedComposition: { infantry: 2000, artillery: 1000, tanks: 0 }, morale: 75, militarization: 30 },
+  { id: 'nat_1', faction: Faction.NATIONALIST, provinceId: 'burgos', movesLeft: 2, manpower: 6000, maxManpower: 6000, composition: { infantry: 4000, artillery: 1000, tanks: 1000 }, designedComposition: { infantry: 4000, artillery: 1000, tanks: 1000 }, morale: 70, militarization: 50 },
+  { id: 'nat_2', faction: Faction.NATIONALIST, provinceId: 'sevilla', movesLeft: 2, manpower: 5500, maxManpower: 5500, composition: { infantry: 3500, artillery: 1500, tanks: 500 }, designedComposition: { infantry: 3500, artillery: 1500, tanks: 500 }, morale: 75, militarization: 55 },
+  { id: 'nat_3', faction: Faction.NATIONALIST, provinceId: 'zaragoza', movesLeft: 2, manpower: 4000, maxManpower: 4000, composition: { infantry: 3000, artillery: 1000, tanks: 0 }, designedComposition: { infantry: 3000, artillery: 1000, tanks: 0 }, morale: 65, militarization: 45 },
+  { id: 'nat_morocco', faction: Faction.NATIONALIST, provinceId: 'tetouan', movesLeft: 2, manpower: 8000, maxManpower: 8000, composition: { infantry: 5000, artillery: 2000, tanks: 1000 }, designedComposition: { infantry: 5000, artillery: 2000, tanks: 1000 }, morale: 90, militarization: 70 },
 ];
 
 export const FACTION_COLORS = {

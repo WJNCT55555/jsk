@@ -9,7 +9,7 @@ import { ProvinceMap } from './components/ProvinceMap';
 import { useGameState } from './hooks/useGameState';
 
 export default function App() {
-  const { state, selectProvince, selectArmy, endTurn, moveArmy, executeOffensive } = useGameState();
+  const { state, selectProvince, selectArmy, endTurn, moveArmy, executeOffensive, recruitArmy, reinforceArmy, mergeSelectedArmies } = useGameState();
 
   return (
     <div className="flex flex-col h-screen w-screen bg-[#D7D2BF] overflow-hidden text-[#1A1A1A]">
@@ -23,24 +23,14 @@ export default function App() {
       
       <main className="flex-1 flex overflow-hidden">
         {/* Central Map Area */}
-        <section className="flex-1 flex flex-col p-6 space-y-4 relative overflow-y-auto">
-          <div className="flex justify-between items-end border-b-2 border-[#1A1A1A] pb-2">
-            <div>
-              <h2 className="text-4xl font-serif italic font-bold">Iberian Peninsula</h2>
-              <p className="text-xs font-mono text-gray-500 uppercase tracking-widest">Tactical Situation Map - Civil War Command</p>
-            </div>
-            <div className="flex flex-col items-end text-xs font-mono text-gray-600">
-              <span>RESOLUTION: SCALE 1:1,000,000</span>
-              <span>PROJECTION: MERCATOR</span>
-            </div>
-          </div>
-
+        <section className="flex-1 flex flex-col p-6 relative overflow-hidden">
           <div className="flex-1 flex items-center justify-center overflow-hidden">
              <ProvinceMap 
               provinces={state.provinces} 
               armies={state.armies}
               selectedId={state.selectedProvinceId} 
               selectedArmyId={state.selectedArmyId}
+              selectedArmyIds={state.selectedArmyIds}
               onSelect={selectProvince} 
               onSelectArmy={selectArmy}
               onMoveArmy={moveArmy}
@@ -55,6 +45,10 @@ export default function App() {
           state={state} 
           onExecuteOffensive={executeOffensive} 
           onSelectProvince={selectProvince} 
+          onRecruitArmy={recruitArmy}
+          onReinforceArmy={reinforceArmy}
+          onSelectArmy={selectArmy}
+          onMergeArmies={mergeSelectedArmies}
         />
       </main>
 

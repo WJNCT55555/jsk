@@ -35,7 +35,14 @@ export interface GameState {
   armies: Army[];
   selectedProvinceId: string | null;
   selectedArmyId: string | null;
+  selectedArmyIds: string[];
   history: string[];
+}
+
+export interface ArmyComposition {
+  infantry: number;   // Number of infantry soldiers
+  artillery: number;  // Number of artillery crew/forces
+  tanks: number;      // Number of tank forces
 }
 
 export interface Army {
@@ -43,7 +50,10 @@ export interface Army {
   faction: Faction;
   provinceId: string;
   movesLeft: number; // Max 2 per turn
-  manpower: number;  // Current troop count (e.g. 1000 - 10000)
+  manpower: number;  // Total troop count (infantry + artillery + tanks)
+  maxManpower: number; // Designed max/total troop count
+  composition: ArmyComposition; // Current composition
+  designedComposition: ArmyComposition; // Designed composition
   morale: number;    // Fighting spirit (0-100)
   militarization: number; // Experience/Efficiency (0-100)
 }
