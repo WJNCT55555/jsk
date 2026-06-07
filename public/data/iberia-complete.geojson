@@ -22940,11 +22940,11 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Málaga",
+        "name": "Malaga",
         "name_alt": null,
         "name_local": null,
-        "name_es": "Málaga",
-        "name_zh": "馬拉加省",
+        "name_es": "Malaga",
+        "name_zh": "马拉加",
         "admin": "Spain",
         "adm1_code": "ESP-5834",
         "iso_a2": "ES",
@@ -28764,11 +28764,11 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cantabria",
+        "name": "Santander",
         "name_alt": null,
         "name_local": null,
-        "name_es": "Cantabria",
-        "name_zh": "坎塔布里亚",
+        "name_es": "Santander",
+        "name_zh": "桑坦德",
         "admin": "Spain",
         "adm1_code": "ESP-5813",
         "iso_a2": "ES",
